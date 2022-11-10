@@ -2,7 +2,6 @@
 <html>
 
 <head>
-  <meta charset="UTF-8">
   <title>3d Cube</title>
 </head>
 
@@ -33,12 +32,12 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      animation: rotate 3s infinite linear;
+      animation: rotate 4s infinite linear;
     }
 
     @keyframes rotate {
       100% {
-        transform: rotateX(-300deg) rotateY(360deg) rotate(405deg);
+        transform: rotateX(-300deg) rotateY(360deg) rotate(405deg) translateZ(-50px);
       }
     }
 
