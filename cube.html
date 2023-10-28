@@ -7,16 +7,47 @@
 </head>
 
 <body>
+  <input class="range-el" type="range" min="100" max="500" step="2">
+
   <div class="cube">
-    <div class="sides top"></div>
-    <div class="sides bottom"></div>
-    <div class="sides left"></div>
-    <div class="sides right"></div>
-    <div class="sides behind"></div>
-    <div class="sides front"></div>
-    <div class="sides middle-left"></div>
-    <div class="sides middle-right"></div>
-    <div class="sides middle"></div>
+    <div class="cube__sides top"></div>
+    <div class="cube__sides bottom"></div>
+    <div class="cube__sides left"></div>
+    <div class="cube__sides right"></div>
+    <div class="cube__sides behind"></div>
+    <div class="cube__sides front"></div>
+    <div class="cube__sides middle-left"></div>
+    <div class="cube__sides middle-right"></div>
+    <div class="cube__sides middle"></div>
+  </div>
+
+  <div class="shapes">
+    <div>
+      <label for="shape-1">shape 1</label>
+      <input class="shapes__el" type="radio" id="shape-1" name="shapes">
+    </div>
+
+    <div>
+      <label for="shape-2">shape 2</label>
+      <input class="shapes__el" type="radio" id="shape-2" name="shapes">
+    </div>
+
+    <div>
+      <label for="shape-3">shape 3</label>
+      <input class="shapes__el" type="radio" id="shape-3" name="shapes">
+    </div>
+
+    <div>
+      <label for="shape-4">shape 4</label>
+      <input class="shapes__el" type="radio" id="shape-4" name="shapes">
+    </div>
+
+    <div>
+      <label for="shape-5">shape 5</label>
+      <input class="shapes__el" type="radio" id="shape-5" name="shapes">
+    </div>
+
+    <button class="shapes__reset-btn">reset</button>
   </div>
 
   <script src="./app.js"></script>
