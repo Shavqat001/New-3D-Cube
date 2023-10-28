@@ -106,3 +106,9 @@ body {
         transform: rotateX(60deg) rotate(405deg);
     }
 }
+
+@media (max-width: 840px) {
+    :root {
+        --cube-size: 100px;
+    }
+}
