@@ -45,3 +45,15 @@ const changeShapes = (buttons, shapes) => {
 for (let i = 0; i < shapes.length; i++) {
     changeShapes(shapeButtons[i], shapes[i]);
 }
+
+// reset button
+
+let resetBtn = document.querySelector('.shapes__reset-btn');
+resetBtn.addEventListener('click', () => {
+    shapeButtons.forEach(el => {
+        el.checked = false;
+        sides.forEach(side => {
+            side.style.clipPath = 'none';
+        });
+    })
+});
