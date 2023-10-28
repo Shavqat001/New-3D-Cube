@@ -22,7 +22,7 @@ body {
         height: var(--cube-size);
         transform: rotateX(60deg) rotate(45deg);
         transform-style: preserve-3d;
-        /* animation: rotation 5s infinite linear; */
+        animation: cube-rotation 5s infinite linear;
 
         >.cube__sides {
             width: 100%;
@@ -101,7 +101,7 @@ body {
     }
 }
 
-@keyframes rotation {
+@keyframes cube-rotation {
     100% {
         transform: rotateX(60deg) rotate(405deg);
     }

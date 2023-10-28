@@ -4,25 +4,25 @@ let sides = document.querySelectorAll('.cube__sides');
 
 let colors = [
     'tomato',
-    'dodgerblue',
+    'linear-gradient(90deg, dodgerblue, aqua)',
     'gold',
     'purple',
     'yellowgreen',
-    'chocolate'
+    'linear-gradient(90deg, tomato, gold)',
+    'aqua',
+    'linear-gradient(90deg, tomato, aqua)',
+    'linear-gradient(90deg, gold, yellowgreen)',
 ];
 
-const getRandomNumber = () => {
-    return Math.floor(Math.random() * colors.length);
-}
-
-sides.forEach(el => {
-    el.style.backgroundColor = colors[getRandomNumber()];
-});
+for (let i = 0; i < sides.length; i++) {
+    sides[i].style.background = colors[i];
+};
 
 // change cube size
 
 let root = getComputedStyle(document.documentElement).getPropertyValue('--cube-size');
 let rangeEl = document.querySelector('.range-el');
+rangeEl.value = 0;
 
 rangeEl.addEventListener('change', (evt) => {
     root = evt.target.value + 'px';
@@ -65,6 +65,7 @@ resetBtn.addEventListener('click', () => {
         el.checked = false;
         sides.forEach(side => {
             side.style.clipPath = 'none';
+            rangeEl.value = 100;
         });
     })
 });
