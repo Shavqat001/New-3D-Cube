@@ -22,7 +22,6 @@ for (let i = 0; i < sides.length; i++) {
 
 let root = getComputedStyle(document.documentElement).getPropertyValue('--cube-size');
 let rangeEl = document.querySelector('.range-el');
-rangeEl.value = 0;
 
 rangeEl.addEventListener('change', (evt) => {
     root = evt.target.value + 'px';
@@ -65,7 +64,20 @@ resetBtn.addEventListener('click', () => {
         el.checked = false;
         sides.forEach(side => {
             side.style.clipPath = 'none';
-            rangeEl.value = 100;
         });
     })
 });
+
+// property
+
+let propertyEl = document.querySelector('.property');
+let toggleBtn = document.querySelector('.toggle-btn');
+
+toggleBtn.addEventListener('click', () => {
+    if (toggleBtn.checked) {
+        propertyEl.style.left = '0';
+    } else {
+        propertyEl.style.left = '-100%';
+    }
+    toggleBtn.classList.toggle('rotate');
+})

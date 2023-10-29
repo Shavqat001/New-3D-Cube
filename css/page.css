@@ -1,0 +1,102 @@
+:root {
+    --cube-size: 400px;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(45deg, #111, #222, #333, #444, #555, #666, #777);
+    overflow-x: hidden;
+
+    >.toggle-btn {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 50px;
+        height: 40px;
+        border: none;
+        margin: 0;
+        appearance: none;
+        background-color: slateblue;
+        clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+        transition: 200ms;
+        transform: rotateY(0deg);
+        left: 0px;
+    }
+
+    .rotate {
+        left: 150px;
+        transform: rotateY(180deg);
+    }
+
+    >.property {
+        position: absolute;
+        left: -100%;
+        top: 50px;
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        height: auto;
+        background-color: steelblue;
+        transition: 200ms;
+        overflow: hidden;
+        font-size: 20px;
+        font-family: sans-serif;
+        padding: 10px;
+
+        >.shapes {
+            display: flex;
+            flex-direction: column;
+
+            >div {
+                display: flex;
+                align-items: center;
+                margin-bottom: 15px;
+
+                >label {
+                    margin-right: 10px;
+                }
+
+                >.shapes__el {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+
+            >.shapes__reset-btn {
+                border: none;
+                font-size: 22px;
+                padding: 5px 0;
+                text-transform: uppercase;
+            }
+        }
+
+        >.property__size {
+            margin-bottom: 10px;
+
+            >.range-el {
+                appearance: none;
+            }
+
+            >.range-el::-webkit-slider-thumb {
+                border-radius: 0;
+                background-color: tomato;
+            }
+        }
+    }
+}
+
+@keyframes cube-rotation {
+    100% {
+        transform: rotateX(60deg) rotate(405deg);
+    }
+}
+
+@media (max-width: 840px) {
+    :root {
+        --cube-size: 100px;
+    }
+}
