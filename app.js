@@ -23,7 +23,7 @@ for (let i = 0; i < sides.length; i++) {
 let root = getComputedStyle(document.documentElement).getPropertyValue('--cube-size');
 let rangeEl = document.querySelector('.range-el');
 
-rangeEl.addEventListener('change', (evt) => {
+rangeEl.addEventListener('input', (evt) => {
     root = evt.target.value + 'px';
     document.documentElement.style.setProperty('--cube-size', root);
 });
